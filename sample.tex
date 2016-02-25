@@ -1,0 +1,56 @@
+\documentclass[11pt]{amsart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{latexsym}
+%\usepackage{graphics}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{geometry}
+\geometry{letterpaper}
+%\usepackage{tikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}{Exercise}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+
+\title{\LaTeX~sample}
+\author{Gottfried Leibniz}
+\date{November 14, 1716}
+
+\begin{document}
+\maketitle
+
+\begin{theorem}
+The derivative of a function $f$ at $c$ is given by
+\[
+  f'(c) = \lim_{x\to c} \frac{f(x)-f(c)}{x-c}
+\]
+provided this limit exists.
+\end{theorem}
+\begin{proof}
+By definition, we know that
+\begin{equation}\label{eqn:DerivDef}
+  f'(c) = \lim_{\Delta x\to 0} \frac{f(c+\Delta x)-f(c)}{\Delta x}.
+\end{equation}
+Let $x = c+\Delta x$.  Then $x\to c$ as $\Delta x\to 0$.  So, replacing
+$c+\Delta x$ by $x$ and $\Delta x$ by  $x-c$ in (\ref{eqn:DerivDef}),
+we find that
+\[
+  f'(c) = \lim_{x\to c}\frac{f(x)-f(c)}{x-c}
+\]
+as desired.
+\end{proof}
+
+\end{document}
